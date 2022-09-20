@@ -1,0 +1,46 @@
+﻿INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E  TECNOLOGIA DO PIAUÍ 
+Curso: ADS 
+Disciplina: Programação Orientada a Objetos Professor: Ely
+	
+
+
+
+Exercício 02 
+1. Qual a diferença entre tipagem dinâmica e tipagem estática? 
+Na tipagem estática os tipos das variáveis de um programa são explicitamente definidos no código e, portanto, conhecidos/checados em tempo de compilação. Na tipagem dinâmica os tipos não são declarados no código e, portanto, conhecidos/checados em tempo de execução.
+2. Qual o principal problema do uso de tipagem dinâmica? 
+Os erros em tempo de execução.
+3. Pesquise um exemplo na internet em que a tipagem dinâmica pode ser problemático. 
+Imagine a seguinte situação: trabalhamos em um sistema importantíssimo de finanças pessoais. Nele, a pessoa digita quanto ganha e quanto gasta e nós vamos adicionando e subtraindo esses valores de seu saldo. Após uma atualização no nosso sistema, recebemos uma ligação desesperada do comercial da empresa: tem uns valores muito loucos aparecendo para os clientes e as contas não batem. Nessa atualização permitimos que os números sejam retirados diretamente da conta corrente do cliente. O que não havíamos percebido é que esses valores vinham como String e não estávamos tratando isso. Sendo assim, um valor de R$20,00 que entrou em uma conta com mais R$20,00 fez com que essa conta totalizasse R$2020,00!
+fonte: https://www.alura.com.br/artigos/tipagem-dinamica-com-javascript
+4. Pesquise e exemplifique com um exemplo porque dizemos que a linguagem C,  mesmo tendo tipagem estática, possui tipagem fraca. 
+Pois mesmo tendo que declarar o tipo de cada variável, a linguagem permite conversão de tipos. 
+5. Pesquise e, se encontrar, um exemplo onde o tipo any seria benéfico. 
+Um exemplo de aplicação de any seria:
+
+
+let var1: any = "Hello World";
+
+
+var1 pode ser redefinido como qualquer outro objeto e typescript não vai brigar com você pq definiu isso ao usar any.
+
+
+let var2 = "Hello World";
+
+
+Nessa linha você já implicitamente declara var2 como um string e se tentar redefinir este valor para um número (por exemplo) já daria um erro. Em typescript, se você não definir um tipo na declaração de um objeto, o typescript vai definir o tipo daquele objeto automaticamente.
+
+
+6. Poderíamos dizer que a tipagem do TypeScript é fraca por uma variável do tipo  number aceitar tanto inteiros como ponto flutuante? 
+        Não, a tipagem fraca está relacionada a capacidade da linguagem de fazer alterações de tipo implicitamente. Nesse caso, tanto inteiro como ponto flutuante são números.
+7. Reescreva o exemplo abaixo, mantendo a quebra de linhas usando template  strings e os valores Ely, 120.56 e TypeScript venham de variáveis declaradas  separadamente e “interpoladas” na string: 
+Ely 
+My payment time is 120.56 
+and 
+my preffered language is TypeScript 
+8. Configure o seu arquivo de configuração do TypeScript com as seguintes opções: a. Alterar o local em que os arquivos *.js são gerados para a pasta build; b. allowUnreachableCode com valor true; 
+https://www.typescriptlang.org/pt/tsconfig#allowUnreachableCode 
+c. noImplicitAny com valor true 
+https://www.typescriptlang.org/pt/tsconfig#noImplicitAny 
+d. target com o valor ES3. Além disso, utilize a classe do exercício anterior e  veja como ela é transpilada para JS; 
+e. strictNullChecks para true e crie um exemplo que mostre a restrição
