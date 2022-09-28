@@ -1,0 +1,3 @@
+a) número 3
+b) string 12
+c) NaN
